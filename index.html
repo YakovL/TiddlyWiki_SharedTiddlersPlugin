@@ -547,14 +547,14 @@ Note: ~SharedTiddlersPlugin is a fork of the [[IncludePlugin|http://tiddlywiki.a
 |''Description''|Introduces a possibility to use tiddlers from other ~TiddlyWikis (with or without importing them)|
 |''Version''|2.5.0|
 |''~CoreVersion''|2.7.0|
-|''Documentation''|http://yakovl.bplaced.net/TW/STP/STP.html#SharedTiddlersPluginInfo|
-|''Source''|http://yakovl.bplaced.net/TW/STP/STP.html#SharedTiddlersPlugin|
+|''Documentation''|https://yakovl.github.io/TiddlyWiki_SharedTiddlersPlugin/#SharedTiddlersPluginInfo|
+|''Source''|https://yakovl.github.io/TiddlyWiki_SharedTiddlersPlugin/#SharedTiddlersPlugin|
 |''Author''|Yakov Litvin|
 |''Forked from''|[[IncludePlugin|http://tiddlywiki.abego-software.de/#IncludePlugin]], by Udo Borkowski|
 |''Contact''|see [[docs|SharedTiddlersPluginInfo]]|
 |''Copyright''|Yakov Litvin, 2013-2019|
-|''Licence''|[[BSD-like open source license|http://yakovl.bplaced.net/TW/STP/STP.html#%5B%5BYakov%20Litvin%20Public%20Licence%5D%5D]] |
-|&gt;| In this tiddler, the code is minified and hidden; the full code can be found [[here|http://yakovl.bplaced.net/TW/STP/STP.html#SharedTiddlersPluginCode]]. |
+|''Licence''|[[BSD-like open source license|https://yakovl.github.io/TiddlyWiki_SharedTiddlersPlugin/#%5B%5BYakov%20Litvin%20Public%20Licence%5D%5D]] |
+|&gt;| In this tiddler, the code is minified and hidden; the full code can be found [[here|https://yakovl.github.io/TiddlyWiki_SharedTiddlersPlugin/#SharedTiddlersPluginCode]]. |
 ''Config:''
 ***/
 //{{{
@@ -577,7 +577,7 @@ if(e||b){var f=function(d,a,b){var c=&quot;&quot;,g=function(d){c+=&quot;\n&quot
 b&amp;&amp;l(&quot;New conflicts among tiddlers competing for substituting shadows:&quot;),d+=f(c,b,!0));e&amp;&amp;d&amp;&amp;alert(d)}}};conflicts.init();var P=function(){var a=B;B=[];if(a.length)for(var c=0;c&lt;C.length;c++)C[c](a)},y,H=function(){void 0!==u&amp;&amp;clearInterval(u);y=0;var a=function(){twWeb.sendProgress(&quot;&quot;,&quot;&quot;,&quot;Done&quot;)};u=setInterval(function(){y++;10&gt;=y||(clearInterval(u),u=void 0,twWeb.sendProgress(&quot;Refreshing...&quot;,&quot;&quot;,&quot;&quot;),refreshDisplay(),setTimeout(a,0))},1)},x=function(a){var c,b;for(b in m){var e=twWeb.getStore(b);
 if(e&amp;&amp;(c=a(e,b)))return c}},I=function(){if(!window.store)return setTimeout(I,100);var a=store.fetchTiddler;window.sharedTiddlersAPI.orig_fetchTiddler=a;store.fetchTiddler=function(b){var c;if(c=q.getSubsUrl(b))return m[c].fetchTiddler(b);if(c=a.apply(this,arguments))return c;if(void 0!==config.shadowTiddlers[b]){if(c=q.getSubsShUrl(b))return m[c].fetchTiddler(b)}else if(b!=config.macros.newTiddler.title)return x(function(a,d){return a.fetchTiddler(b)})};var c=store.forEachTiddler;window.sharedTiddlersAPI.orig_forEachTiddler=
 c;store.forEachTiddler=function(a){var b={},f=function(d,c){b[d]||q.getSubsUrl(d)&amp;&amp;q.getSubsUrl(d)!=c.getIncludeURL()||(b[d]=1,a.apply(this,arguments))};c.call(store,f);for(var d in config.shadowTiddlers)q.getSubsShUrl(d)||(b[d]=1);b[config.macros.newTiddler.title]=1;x(function(d,a){d.forEachTiddler(f)})};twWeb.getIncludedStoresUrls().length&amp;&amp;H()},J=function(){if(!window.store)return setTimeout(J,100);var a=store.fetchTiddler(&quot;IncludeList&quot;),c=a.text;c&amp;&amp;wikify(c,document.createElement(&quot;div&quot;),void 0,
-a)};config.extensions.SharedTiddlersPlugin={getFunctionUsingForReallyEachTiddler:function(a){return a},useForReallyEachTiddler:function(a,c){return a[c]},addListener:function(a){C.push(a)}};config.extensions.SharedTiddlersPlugin.addListener(H);config.shadowTiddlers.AdvancedOptions+=&quot;\n~IncludePlugin settings:\n&lt;&lt;option chkUseInclude&gt;&gt; Include ~TiddlyWikis\n&lt;&lt;option chkAlertOnSharedTiddlersConflicts&gt;&gt; Alert on tiddler name conflicts\n&lt;&lt;option chkWarnOnSharedTiddlersConflicts&gt;&gt; Display messages and write log in the browser console on conflicts\nIncludeList | IncludeState | ImportIncluded | [[help|http://yakovl.bplaced.net/TW/SharedTiddlersPlugin.html/#SharedTiddlersPluginInfo]]\n^^(Reload this ~TiddlyWiki to make changes become effective)^^&quot;;
+a)};config.extensions.SharedTiddlersPlugin={getFunctionUsingForReallyEachTiddler:function(a){return a},useForReallyEachTiddler:function(a,c){return a[c]},addListener:function(a){C.push(a)}};config.extensions.SharedTiddlersPlugin.addListener(H);config.shadowTiddlers.AdvancedOptions+=&quot;\n~IncludePlugin settings:\n&lt;&lt;option chkUseInclude&gt;&gt; Include ~TiddlyWikis\n&lt;&lt;option chkAlertOnSharedTiddlersConflicts&gt;&gt; Alert on tiddler name conflicts\n&lt;&lt;option chkWarnOnSharedTiddlersConflicts&gt;&gt; Display messages and write log in the browser console on conflicts\nIncludeList | IncludeState | ImportIncluded | [[help|https://yakovl.github.io/TiddlyWiki_SharedTiddlersPlugin/#SharedTiddlersPluginInfo]]\n^^(Reload this ~TiddlyWiki to make changes become effective)^^&quot;;
 config.shadowTiddlers.IncludeState=&quot;&lt;&lt;includeState&gt;&gt;&quot;;config.shadowTiddlers.ImportIncluded='|               &lt;&lt;option txtStoreUrl&gt;&gt;|url of the document to import from |\n| &lt;&lt;option txtFilterTiddlersToImport&gt;&gt;|filter of tiddlers to import |\n|            &lt;&lt;option chkImportNewer&gt;&gt;|import only newer tiddlers (if those with same title already present) |\n|              &lt;&lt;option chkImportAsk&gt;&gt;|interactive import (ask whether to import each tiddler) |\n&lt;html&gt;&lt;a href=\'javascript:;\' onclick=\'\n\tvar storeUrl = config.options.txtStoreUrl,\n\t    params = {\n\t\tfilterLine: config.options.txtFilterTiddlersToImport,\n\t\timportOptions: {\n\t\t\twhich: config.options.chkImportNewer ? &quot;newer&quot; : &quot;all&quot;,\n\t\t\task: config.options.chkImportAsk\n\t\t},\n\t\tnoRefresh: true,\n\t};\n\tif(!storeUrl)\n\t\treturn displayMessage(&quot;please specify the url to import from&quot;);\n\tif(!params.filterLine)\n\t\treturn displayMessage(&quot;please specify the filter of tiddlers to import&quot;);\n\tif(!sharedTiddlersAPI.getStore(storeUrl))\n\t\tdisplayMessage(&quot;warning: no store was loaded from &quot;+storeUrl+&quot; previously, trying now&quot;);\n\ttwWeb.include(storeUrl,params);\n\'&gt;import (without saving)&lt;a/&gt;&lt;/html&gt;';
 Tiddler.prototype.isIncluded=function(){return void 0!=this.includeURL};Tiddler.prototype.getIncludeURL=function(){return this.includeURL};Tiddler.prototype.setIncludeURL=function(a){this.includeURL=a};Tiddler.prototype.deleteIncludeURL=function(){delete this.includeURL};config.extensions.SharedTiddlersPlugin.orig_Tiddler_isReadOnly||(config.extensions.SharedTiddlersPlugin.orig_Tiddler_isReadOnly=Tiddler.prototype.isReadOnly,Tiddler.prototype.isReadOnly=function(){return config.extensions.SharedTiddlersPlugin.orig_Tiddler_isReadOnly.apply(this,
 arguments)||this.isIncluded()});config.extensions.SharedTiddlersPlugin.orig_Tiddler_doNotSave||(config.extensions.SharedTiddlersPlugin.orig_Tiddler_doNotSave=Tiddler.prototype.doNotSave,Tiddler.prototype.doNotSave=function(){return config.extensions.SharedTiddlersPlugin.orig_Tiddler_doNotSave.apply(this,arguments)||this.isIncluded()});twWeb=new function(){var a={},c={},b={},e,f=this;this.includeUsages=new k;this.setSelfNodeName=function(d){e=d};this.getSelfNodeName=function(){return e};this.setNodeDesc=
@@ -616,12 +616,12 @@ twWeb.getState;window.sharedTiddlersAPI.getStore=twWeb.getStore;window.sharedTid
 &quot;&quot;&quot;&lt;&lt;include &quot;example%20included.html&quot; filters:&quot;[tag[external]]&quot;&gt;&gt;&quot;&quot;&quot;</pre>
 </div>
 <div title="SharedTiddlersPluginInfo" creator="Yakov Litvin" modifier="Yakov Litvin" created="201208151641" modified="201905031858" changecount="313">
-<pre>|''Source''|http://yakovl.bplaced.net/TW/STP/STP.html#SharedTiddlersPluginInfo|
+<pre>|''Source''|https://yakovl.github.io/TiddlyWiki_SharedTiddlersPlugin/#SharedTiddlersPluginInfo|
 |''Description''|Documentation for ~SharedTiddlersPlugin|
-|''Plugin source''|http://yakovl.bplaced.net/TW/STP/STP.html#SharedTiddlersPlugin|
+|''Plugin source''|https://yakovl.github.io/TiddlyWiki_SharedTiddlersPlugin/#SharedTiddlersPlugin|
 |''Version''|2.5.0|
 |''Author''|Yakov Litvin|
-|''License''|[[BSD-like open source license|http://yakovl.bplaced.net/TW/STP/STP.html#%5B%5BYakov%20Litvin%20Public%20Licence%5D%5D]]|
+|''License''|[[BSD-like open source license|https://yakovl.github.io/TiddlyWiki_SharedTiddlersPlugin/#%5B%5BYakov%20Litvin%20Public%20Licence%5D%5D]]|
 |''Contact''|Yakov.A.Litvin at gmail dot com (please read docs, esp. &quot;Installation, configuring and troubleshooting&quot; section before sending an email)|
 &lt;&lt;tabs txtSharedTiddlersPluginInfoTab
 	&quot;Installation, configuring and troubleshooting&quot; &quot;&quot; [[SharedTiddlersPluginInfo##Installation, configuring and troubleshooting]]
@@ -878,7 +878,7 @@ where &quot;./food.html&quot; is a third ~TiddlyWiki), then if you include this 
 &lt;/html&gt;Although the documentation of the ~IncludePlugin sais that it's possible to include some remote ~TiddlyWikis into a local one, in modern browsers this seemingly no longer works (tested in IP 1.0.1 and STP 1.3 + Opera 12.0-16.0 and ~FireFox 13.0.1). On the other hand, when running a ~TiddlyWiki on a webserver, one can include ~TWs from the same domain, but can't include any TW from a different website (because of so-called &quot;~Cross-Site Scripting&quot; security issue). @@font-size:smaller;Including remote ~TiddlyWikis into a local one may be reintroduced in the future, but this requires changing the load engine which means some extensive search. Any feedback or ideas regarding this issue are particularly appreciated.@@
 
 &lt;html&gt;&lt;h2&gt;Making secondary TiddlyWikis smaller&lt;/h2&gt;
-&lt;/html&gt;In some cases included ~TWs can be supposed not to get changed (like archived pieces of journal or news) and be desired to be smaller (especially when placed at a web-site) at the same time. In such cases included ~TiddlyWikis can be reduced to the [[PureStore|http://yakovl.bplaced.net/TW/STP/STP.html#PureStore]] format.
+&lt;/html&gt;In some cases included ~TWs can be supposed not to get changed (like archived pieces of journal or news) and be desired to be smaller (especially when placed at a web-site) at the same time. In such cases included ~TiddlyWikis can be reduced to the [[PureStore|https://yakovl.github.io/TiddlyWiki_SharedTiddlersPlugin/#PureStore]] format.
 
 &lt;html&gt;&lt;h2&gt;The TwWeb and the describeNode macro&lt;/h2&gt;
 &lt;/html&gt;The {{{describeNode}}} macro addes a description of a node (a ~TiddlyWiki) to the ~TwWeb. Minimal description consists of the name of the node and its address:
@@ -1355,13 +1355,13 @@ Here's a [[test|PureStoreTest]] of including from a ~PureStore file.</pre>
 |''Description''|Introduces a possibility to use tiddlers from other ~TiddlyWikis (with or without importing them)|
 |''Version''|2.5.0|
 |''~CoreVersion''|2.7.0|
-|''Documentation''|http://yakovl.bplaced.net/TW/STP/STP.html#SharedTiddlersPluginInfo|
-|''Source''|http://yakovl.bplaced.net/TW/STP/STP.html#SharedTiddlersPluginCode|
+|''Documentation''|https://yakovl.github.io/TiddlyWiki_SharedTiddlersPlugin/#SharedTiddlersPluginInfo|
+|''Source''|https://yakovl.github.io/TiddlyWiki_SharedTiddlersPlugin/#SharedTiddlersPluginCode|
 |''Author''|Yakov Litvin|
 |''Forked from''|[[IncludePlugin|http://tiddlywiki.abego-software.de/#IncludePlugin]], by Udo Borkowski|
 |''Contact''|see [[docs|SharedTiddlersPluginInfo]]|
 |''Copyright''|Yakov Litvin, 2013-2019|
-|''Licence''|[[BSD-like open source license|http://yakovl.bplaced.net/TW/STP/STP.html#%5B%5BYakov%20Litvin%20Public%20Licence%5D%5D]]|
+|''Licence''|[[BSD-like open source license|https://yakovl.github.io/TiddlyWiki_SharedTiddlersPlugin/#%5B%5BYakov%20Litvin%20Public%20Licence%5D%5D]]|
 ***/
 // // ''Config:''
 //{{{
@@ -2154,7 +2154,7 @@ config.shadowTiddlers.AdvancedOptions +=
 	 &quot;\n&lt;&lt;option chkUseInclude&gt;&gt; Include ~TiddlyWikis&quot;+
 	 &quot;\n&lt;&lt;option chkAlertOnSharedTiddlersConflicts&gt;&gt; Alert on tiddler name conflicts&quot;+
 	 &quot;\n&lt;&lt;option chkWarnOnSharedTiddlersConflicts&gt;&gt; Display messages and write log in the browser console on conflicts&quot;+
-	 &quot;\nIncludeList | IncludeState | ImportIncluded | [[help|http://yakovl.bplaced.net/TW/SharedTiddlersPlugin.html/#SharedTiddlersPluginInfo]]&quot;+
+	 &quot;\nIncludeList | IncludeState | ImportIncluded | [[help|https://yakovl.github.io/TiddlyWiki_SharedTiddlersPlugin/#SharedTiddlersPluginInfo]]&quot;+
 	 &quot;\n^^(Reload this ~TiddlyWiki to make changes become effective)^^&quot;);
 config.shadowTiddlers.IncludeState = &quot;&lt;&lt;includeState&gt;&gt;&quot;;
 
