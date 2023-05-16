@@ -945,7 +945,7 @@ Within these docs, such mechanisms are called &quot;propagation&quot; (of links,
 &lt;html&gt;&lt;h2&gt;Installation&lt;/h2&gt;
 &lt;/html&gt;First, put the plugin inside your ~TiddlyWiki. This is done as always: import the SharedTiddlersPlugin tiddler (using ImportTiddlers or another engine) or copy it (don't forget the {{{systemConfig}}} tag). You'll need to restart your ~TiddlyWiki (refresh the page) to get it working -- then you may check if it's installed properly in the PluginManager. You can also import or copy this documentation to have it at hand when needed.
 
-If your TW has version below 2.6.2, you also have to install [[UpToDateFiltersPlugin|http://yakovl.bplaced.net/TW/ExtraFilters.html#UpToDateFiltersPlugin]] in the same fashion. Open TW source or use the {{{&lt;&lt;version&gt;&gt;}}} macro to reveal the version of your TW.
+If your TW has version below 2.6.2, you also have to install [[UpToDateFiltersPlugin|https://yakovl.github.io/TiddlyWiki_ExtraFilters/#UpToDateFiltersPlugin]] in the same fashion. Open TW source or use the {{{&lt;&lt;version&gt;&gt;}}} macro to reveal the version of your TW.
 
 Second, add {{{&lt;&lt;include&gt;&gt;}}} macros to IncludeList and wherever you need them. As IncludeList is wikified when you view it, you don't need to restart the &quot;main&quot; ~TiddlyWiki, despite the fact that IncludeList is processed on startup. Add links, transclusions and other &quot;connections&quot; with included tiddlers, if necessary. Search, timeline, {{{&lt;&lt;tag&gt;&gt;}}} and other macros can be used as well.
 
@@ -962,7 +962,7 @@ These along with links to IncludeList, IncludeState and these documentation in t
 
 &lt;html&gt;&lt;h2&gt;Troubleshooting&lt;/h2&gt;
 &lt;/html&gt;If something goes wrong, you should check:
-* core version of your TW: it must be no less than the ~CoreVersion value in the [[SharedTiddlersPlugin]]'s header. You can check it using the {{{&lt;&lt;version&gt;&gt;}}} macro. Also, if [[UpToDateFiltersPlugin|http://yakovl.bplaced.net/TW/ExtraFilters.html#UpToDateFiltersPlugin]] is not installed, it must be 2.6.2 or greater
+* core version of your TW: it must be no less than the ~CoreVersion value in the [[SharedTiddlersPlugin]]'s header. You can check it using the {{{&lt;&lt;version&gt;&gt;}}} macro. Also, if [[UpToDateFiltersPlugin|https://yakovl.github.io/TiddlyWiki_ExtraFilters/#UpToDateFiltersPlugin]] is not installed, it must be 2.6.2 or greater
 * the PluginManager -- ~SharedTiddlersPlugin should be present there, be not Disabled, have no error log (if all of these is true, than the plugin is installed correctly); also, only one copy of ~SharedTiddlersPlugin or ~IncludePlugin should be installed
 * if the plugin is installed correctly, inspect the {{{chkUseInclude}}} option -- should be checked for the plugin to work
 * if the problem is not because of {{{chkUseInclude}}}, go to the IncludeState and see if any problems are reported there
@@ -1264,7 +1264,7 @@ Finally, the patch will work correctly only if it is used after STP is launched 
 ** documentation improvements, added description of the {{{window.sharedTiddlersAPI.importAndLog(tiddler,mode)}}} method
 * 1.6.0 (13.02.2013)
 ** added evaluation of tiddlers via the {{{include}}} macro with the new {{{eval}}} parameter
-** added filters {{{all}}} and {{{includedFrom}}}; now in TW 2.6.1 or elder STP requires [[UpToDateFiltersPlugin|http://yakovl.bplaced.net/TW/ExtraFilters.html#UpToDateFiltersPlugin]]
+** added filters {{{all}}} and {{{includedFrom}}}; now in TW 2.6.1 or elder STP requires [[UpToDateFiltersPlugin|https://yakovl.github.io/TiddlyWiki_ExtraFilters/#UpToDateFiltersPlugin]]
 ** {{{allTiddlersAreLoaded}}} parameter is no longer added to stores, no need to check it (but old {{{if(allTiddlersAreLoaded)}}} code pieces to get all tiddlers should work)
 ** {{{hide}}} parameter of the {{{include}}} macro now can be used without trailing {{{:true}}}
 ** some fixes and code improvements, better API documentation
