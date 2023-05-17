@@ -609,11 +609,11 @@ twWeb.getState;window.sharedTiddlersAPI.getStore=twWeb.getStore;window.sharedTid
 //%/ //</pre>
 </div>
 <div title="IncludeList" creator="Yakov Litvin" modifier="Yakov Litvin" created="201309261616" changecount="1">
-<pre>&lt;&lt;include &quot;example included.html&quot; filters:&quot;[tag[external]]&quot;&gt;&gt;
-&lt;&lt;include &quot;example included.html&quot; filters:&quot;[tag[tagged to be external]]&quot; substituteShadows&gt;&gt;
-&lt;&lt;include &quot;example included.html&quot; filters:&quot;[[A tiddler to be included with substituting]]&quot; substitute&gt;&gt;
-&lt;&lt;include &quot;example second level inclusion.html&quot; filters:&quot;[[A tiddler to be included with substituting]]&quot; substitute&gt;&gt;
-&quot;&quot;&quot;&lt;&lt;include &quot;example%20included.html&quot; filters:&quot;[tag[external]]&quot;&gt;&gt;&quot;&quot;&quot;</pre>
+<pre>&lt;&lt;include &quot;demo-included/example included.html&quot; filters:&quot;[tag[external]]&quot;&gt;&gt;
+&lt;&lt;include &quot;demo-included/example included.html&quot; filters:&quot;[tag[tagged to be external]]&quot; substituteShadows&gt;&gt;
+&lt;&lt;include &quot;demo-included/example included.html&quot; filters:&quot;[[A tiddler to be included with substituting]]&quot; substitute&gt;&gt;
+&lt;&lt;include &quot;demo-included/example second level inclusion.html&quot; filters:&quot;[[A tiddler to be included with substituting]]&quot; substitute&gt;&gt;
+&quot;&quot;&quot;&lt;&lt;include &quot;demo-included/example%20included.html&quot; filters:&quot;[tag[external]]&quot;&gt;&gt;&quot;&quot;&quot;</pre>
 </div>
 <div title="SharedTiddlersPluginInfo" creator="Yakov Litvin" modifier="Yakov Litvin" created="201208151641" modified="201905031858" changecount="313">
 <pre>|''Source''|https://yakovl.github.io/TiddlyWiki_SharedTiddlersPlugin/#SharedTiddlersPluginInfo|
@@ -1056,9 +1056,9 @@ window.sharedTiddlersAPI.importAndLog(tiddler, modeOrOptions)
 It strips {{{includeURL}}} from the {{{tiddler}}}, imports it according to the mode/options (in the latter case {{{modeOrOptions.which}}} corresponds to {{{importOnly}}} param of {{{&lt;&lt;include&gt;&gt;}}}, {{{modeOrOptions.ask}}} – to {{{askBeforeImport}}}, also {{{modeOrOptions.mode}}} can be set) and logs the results in the browser console. If {{{modeOrOptions}}} is not passed, it defaults to {{{ { which: 'all', ask: false } }}}; other defaults and precedence are described in &quot;Detailed reference&quot; (&quot;Import tools&quot;).
 
 &lt;html&gt;&lt;h2&gt;Examples&lt;/h2&gt;
-&lt;/html&gt;(require &quot;example included.html&quot; ~TiddlyWiki included):
+&lt;/html&gt;(require &quot;demo-included/example included.html&quot; ~TiddlyWiki included):
 &lt;html&gt;&lt;a href=&quot;javascript:;&quot; onclick='
-	url = &quot;example included.html&quot;;
+	url = &quot;demo-included/example included.html&quot;;
 	var twStore = sharedTiddlersAPI.getStore(url);
 	if(!twStore) {
 		displayMessage(&quot;The store is not loaded&quot;);
@@ -1071,10 +1071,10 @@ It strips {{{includeURL}}} from the {{{tiddler}}}, imports it according to the m
 		if(usedTiddler.getIncludeURL() == url)
 	        	displayMessage(&quot;- &quot;+title);
 	});
-'&gt;Show all tiddlers included from the &quot;example included.html&quot; store (with regard to priorities)&lt;/a&gt;&lt;/html&gt;
+'&gt;Show all tiddlers included from the &quot;demo-included/example included.html&quot; store (with regard to priorities)&lt;/a&gt;&lt;/html&gt;
 {{{
 &lt;html&gt;&lt;a href=&quot;javascript:;&quot; onclick='
-	url = &quot;example included.html&quot;;
+	url = &quot;demo-included/example included.html&quot;;
 	var twStore = sharedTiddlersAPI.getStore(url);
 	if(!twStore) {
 		displayMessage(&quot;The store is not loaded&quot;);
@@ -1087,11 +1087,11 @@ It strips {{{includeURL}}} from the {{{tiddler}}}, imports it according to the m
 		if(usedTiddler.getIncludeURL() == url)
 	        	displayMessage(&quot;- &quot;+title);
 	});
-'&gt;Show all tiddlers included from the &quot;example included.html&quot; store (with regard to priorities)&lt;/a&gt;&lt;/html&gt;
+'&gt;Show all tiddlers included from the &quot;demo-included/example included.html&quot; store (with regard to priorities)&lt;/a&gt;&lt;/html&gt;
 }}}
 
 &lt;html&gt;&lt;a href=&quot;javascript:;&quot; onclick='
-	var twStore = sharedTiddlersAPI.getStore(&quot;example included.html&quot;);
+	var twStore = sharedTiddlersAPI.getStore(&quot;demo-included/example included.html&quot;);
 	if(!twStore) {
 		displayMessage(&quot;The store is not loaded&quot;);
 		return;
@@ -1100,10 +1100,10 @@ It strips {{{includeURL}}} from the {{{tiddler}}}, imports it according to the m
 	twStore.forEachTiddler(function(title,tiddler) {
 		displayMessage(&quot;- &quot;+title);
 	});
-'&gt;Show all tiddlers included from the &quot;example included.html&quot; store, without regard to priorities&lt;/a&gt;&lt;/html&gt;
+'&gt;Show all tiddlers included from the &quot;demo-included/example included.html&quot; store, without regard to priorities&lt;/a&gt;&lt;/html&gt;
 {{{
 &lt;html&gt;&lt;a href=&quot;javascript:;&quot; onclick='
-	var twStore = sharedTiddlersAPI.getStore(&quot;example included.html&quot;);
+	var twStore = sharedTiddlersAPI.getStore(&quot;demo-included/example included.html&quot;);
 	if(!twStore) {
 		displayMessage(&quot;The store is not loaded&quot;);
 		return;
@@ -1112,11 +1112,11 @@ It strips {{{includeURL}}} from the {{{tiddler}}}, imports it according to the m
 	twStore.forEachTiddler(function(title,tiddler) {
 		displayMessage(&quot;- &quot;+title);
 	});
-'&gt;Show all tiddlers included from the &quot;example included.html&quot; store, without regard to priorities&lt;/a&gt;&lt;/html&gt;
+'&gt;Show all tiddlers included from the &quot;demo-included/example included.html&quot; store, without regard to priorities&lt;/a&gt;&lt;/html&gt;
 }}}
 
 &lt;html&gt;&lt;a href=&quot;javascript:;&quot; onclick='
-	var includedStore = sharedTiddlersAPI.getStore(&quot;example included.html&quot;);
+	var includedStore = sharedTiddlersAPI.getStore(&quot;demo-included/example included.html&quot;);
 	if(!includedStore) {
 		displayMessage(&quot;The store is not loaded&quot;);
 		return;
@@ -1133,10 +1133,10 @@ It strips {{{includeURL}}} from the {{{tiddler}}}, imports it according to the m
 			displayMessage(&quot;- &quot;+list[i]);
 	} else
 		displayMessage(&quot;No tiddlers changed after July 1st, 2007 were found&quot;);
-'&gt;Show all tiddlers in the &quot;example included.html&quot; store changed after July 1st, 2007&lt;/a&gt;&lt;/html&gt;
+'&gt;Show all tiddlers in the &quot;demo-included/example included.html&quot; store changed after July 1st, 2007&lt;/a&gt;&lt;/html&gt;
 {{{
 &lt;html&gt;&lt;a href=&quot;javascript:;&quot; onclick='
-	var includedStore = sharedTiddlersAPI.getStore(&quot;example included.html&quot;);
+	var includedStore = sharedTiddlersAPI.getStore(&quot;demo-included/example included.html&quot;);
 	if(!includedStore) {
 		displayMessage(&quot;The store is not loaded&quot;);
 		return;
@@ -1153,7 +1153,7 @@ It strips {{{includeURL}}} from the {{{tiddler}}}, imports it according to the m
 			displayMessage(&quot;- &quot;+list[i]);
 	} else
 		displayMessage(&quot;No tiddlers changed after July 1st, 2007 were found&quot;);
-'&gt;Show all tiddlers in the &quot;example included.html&quot; store changed after July 1st, 2007&lt;/a&gt;&lt;/html&gt;
+'&gt;Show all tiddlers in the &quot;demo-included/example included.html&quot; store changed after July 1st, 2007&lt;/a&gt;&lt;/html&gt;
 }}}
 
 &lt;html&gt;&lt;a href=&quot;javascript:;&quot; onclick='
