@@ -543,17 +543,16 @@ Note: ~SharedTiddlersPlugin is a fork of the [[IncludePlugin|http://tiddlywiki.a
 </div>
 <div title="SharedTiddlersPlugin" creator="Yakov Litvin" modifier="Yakov Litvin" created="201212102148" modified="201905031830" tags="systemConfig" changecount="76">
 <pre>/***
-|''Name''|SharedTiddlersPlugin|
-|''Description''|Allows to use tiddlers from other ~TiddlyWikis (with or without importing them)|
-|''Version''|2.5.0|
-|''~CoreVersion''|2.7.0|
-|''Documentation''|https://yakovl.github.io/TiddlyWiki_SharedTiddlersPlugin/#SharedTiddlersPluginInfo|
-|''Source''|https://yakovl.github.io/TiddlyWiki_SharedTiddlersPlugin/#SharedTiddlersPlugin|
-|''Author''|Yakov Litvin|
-|''Forked from''|[[IncludePlugin|http://tiddlywiki.abego-software.de/#IncludePlugin]], by Udo Borkowski|
-|''Contact''|see [[docs|SharedTiddlersPluginInfo]]|
-|''Copyright''|Yakov Litvin, 2013|
-|''Licence''|[[BSD-like open source license|https://yakovl.github.io/TiddlyWiki_SharedTiddlersPlugin/#%5B%5BYakov%20Litvin%20Public%20Licence%5D%5D]] |
+|Description |Allows to use tiddlers from other ~TiddlyWikis (with or without importing them)|
+|Docs        |https://yakovl.github.io/TiddlyWiki_SharedTiddlersPlugin/#SharedTiddlersPluginInfo|
+|Source      |https://yakovl.github.io/TiddlyWiki_SharedTiddlersPlugin/#SharedTiddlersPlugin|
+|Author      |Yakov Litvin|
+|~CoreVersion|2.7.0|
+|Version     |2.5.1|
+|Forked from |[[IncludePlugin|http://tiddlywiki.abego-software.de/#IncludePlugin]], by Udo Borkowski|
+|Contact     |see [[docs|SharedTiddlersPluginInfo]]|
+|Licence     |[[BSD-like open source license|https://yakovl.github.io/TiddlyWiki_SharedTiddlersPlugin/#%5B%5BYakov%20Litvin%20Public%20Licence%5D%5D]] |
+|Copyright   |Yakov Litvin, 2013|
 |&gt;| In this tiddler, the code is minified and hidden; the full code can be found [[here|https://yakovl.github.io/TiddlyWiki_SharedTiddlersPlugin/#SharedTiddlersPluginCode]]. |
 ''Config:''
 ***/
@@ -616,13 +615,12 @@ twWeb.getState;window.sharedTiddlersAPI.getStore=twWeb.getStore;window.sharedTid
 &quot;&quot;&quot;&lt;&lt;include &quot;demo-included/example%20included.html&quot; filters:&quot;[tag[external]]&quot;&gt;&gt;&quot;&quot;&quot;</pre>
 </div>
 <div title="SharedTiddlersPluginInfo" creator="Yakov Litvin" modifier="Yakov Litvin" created="201208151641" modified="201905031858" changecount="313">
-<pre>|''Source''|https://yakovl.github.io/TiddlyWiki_SharedTiddlersPlugin/#SharedTiddlersPluginInfo|
-|''Description''|Documentation for ~SharedTiddlersPlugin|
-|''Plugin source''|https://yakovl.github.io/TiddlyWiki_SharedTiddlersPlugin/#SharedTiddlersPlugin|
-|''Version''|2.5.0|
-|''Author''|Yakov Litvin|
-|''License''|[[BSD-like open source license|https://yakovl.github.io/TiddlyWiki_SharedTiddlersPlugin/#%5B%5BYakov%20Litvin%20Public%20Licence%5D%5D]]|
-|''Contact''|Yakov.A.Litvin at gmail dot com (please read docs, esp. &quot;Installation, configuring and troubleshooting&quot; section before sending an email)|
+<pre>|Description|Documentation for [[SharedTiddlersPlugin|https://yakovl.github.io/TiddlyWiki_SharedTiddlersPlugin/#SharedTiddlersPlugin]]|
+|Source     |https://yakovl.github.io/TiddlyWiki_SharedTiddlersPlugin/#SharedTiddlersPluginInfo|
+|Author     |Yakov Litvin|
+|Version    |2.5.1|
+|Contact    |Create an [[issue|https://github.com/YakovL/TiddlyWiki_SharedTiddlersPlugin/issues]] or start a new thread in the [[Google Group|https://groups.google.com/g/tiddlywikiclassic/]] (please read docs, esp. &quot;Installation, configuring and troubleshooting&quot; section before asking)|
+|License    |[[BSD-like open source license|https://yakovl.github.io/TiddlyWiki_SharedTiddlersPlugin/#%5B%5BYakov%20Litvin%20Public%20Licence%5D%5D]]|
 &lt;&lt;tabs txtSharedTiddlersPluginInfoTab
 	&quot;Installation, configuring and troubleshooting&quot; &quot;&quot; [[SharedTiddlersPluginInfo##Installation, configuring and troubleshooting]]
 	&quot;Functionality and examples&quot; &quot;&quot; [[SharedTiddlersPluginInfo##Functionality and examples]]
@@ -1351,17 +1349,16 @@ Here's a [[test|PureStoreTest]] of including from a ~PureStore file.</pre>
 </div>
 <div title="SharedTiddlersPluginCode" creator="Yakov Litvin" modifier="Yakov Litvin" created="201208170958" modified="201905031830" tags="code" changecount="73">
 <pre>/***
-|''Name''|SharedTiddlersPlugin|
-|''Description''|Allows to use tiddlers from other ~TiddlyWikis (with or without importing them)|
-|''Version''|2.5.0|
-|''~CoreVersion''|2.7.0|
-|''Documentation''|https://yakovl.github.io/TiddlyWiki_SharedTiddlersPlugin/#SharedTiddlersPluginInfo|
-|''Source''|https://yakovl.github.io/TiddlyWiki_SharedTiddlersPlugin/#SharedTiddlersPluginCode|
-|''Author''|Yakov Litvin|
-|''Forked from''|[[IncludePlugin|http://tiddlywiki.abego-software.de/#IncludePlugin]], by Udo Borkowski|
-|''Contact''|see [[docs|SharedTiddlersPluginInfo]]|
-|''Copyright''|Yakov Litvin, 2013|
-|''Licence''|[[BSD-like open source license|https://yakovl.github.io/TiddlyWiki_SharedTiddlersPlugin/#%5B%5BYakov%20Litvin%20Public%20Licence%5D%5D]]|
+|Description |Allows to use tiddlers from other ~TiddlyWikis (with or without importing them)|
+|Docs        |https://yakovl.github.io/TiddlyWiki_SharedTiddlersPlugin/#SharedTiddlersPluginInfo|
+|Source      |https://yakovl.github.io/TiddlyWiki_SharedTiddlersPlugin/#SharedTiddlersPluginCode|
+|Author      |Yakov Litvin|
+|~CoreVersion|2.7.0|
+|Version     |2.5.1|
+|Forked from |[[IncludePlugin|http://tiddlywiki.abego-software.de/#IncludePlugin]], by Udo Borkowski|
+|Contact     |see [[docs|SharedTiddlersPluginInfo]]|
+|Licence     |[[BSD-like open source license|https://yakovl.github.io/TiddlyWiki_SharedTiddlersPlugin/#%5B%5BYakov%20Litvin%20Public%20Licence%5D%5D]] |
+|Copyright   |Yakov Litvin, 2013|
 ***/
 // // ''Config:''
 //{{{
